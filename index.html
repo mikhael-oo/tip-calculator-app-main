@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&family=Space+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <link rel="stylesheet" type="text/css" href="./css/style.css" />
+    <title>Frontend Mentor | Tip calculator app</title>
+  </head>
+  <body>
+    <header>
+      <img src="./images/logo.svg" alt="logo" />
+    </header>
+    <main role="main">
+      <section class="bill-section">
+        <div class="mini-section">
+          <h4>Bill</h4>
+          <!--Some sort of form goes here-->
+          <div class="inputs">
+            <img src="./images/icon-dollar.svg" alt="dollar icon" />
+            <input id="bill-amount" class="input" type="number" value="0" required>
+            <p class="error bill-error">Can't be 0 or negative</p>
+          </div>
+        </div>
+        <div class="mini-section">
+          <h4>Select Tip %</h4>
+          <ul class="percent-section">
+            <li><button class="percent percent-btn">5%</button></li>
+            <li><button class="percent percent-btn">10%</button></li>
+            <li><button class="percent percent-btn">15%</button></li>
+            <li><button class="percent percent-btn">25%</button></li>
+            <li><button class="percent percent-btn">50%</button></li>
+            <li><input class="percent custom-percent" type="number" placeholder="Custom"></input></li>
+          </ul>
+        </div>
+        <div class="mini-section">
+          <h4>Number of People</h4>
+          <!--Another sort of input form with a logo-->
+          <div class="inputs">
+            <img src="./images/icon-person.svg" alt="dollar icon" />
+            <input id="num-people" class="input" type="number" value="1" min="1" required>
+            <p class="error people-error">Can't be 0 or negative</p>
+          </div>
+        </div>
+      </section>
+      <section class="tips-section" role="tips calculator">
+        <div class="tips-group">
+          <div class="tip-container indiv">
+            <div>
+              <h4>Tip Amount</h4>
+              <p>/ person</p>
+            </div>
+            <h1 class="indiv-tip">$<span id="tip-amt"></span></h1>
+          </div>
+          <div class="tip-container total">
+            <div>
+              <h4>Total</h4>
+              <p>/ person</p>
+            </div>
+            <h1 class="total-tip">$<span id="total-per-person"></span></h1>
+          </div>
+        </div>
+        
+        <div class="reset">
+          <button id="reset-bt" class="reset-btn">Reset</button>
+        </div>
+      </section>
+    </main>
+    <footer class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a id="test" href="#">Mikhael Opeyemi-Olatunji</a>.
+    </footer>
+    <script src="./js/index.js" type="text/javascript"></script>
+  </body>
+</html>

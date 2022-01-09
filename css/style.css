@@ -1,0 +1,251 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    font-family: "Space Mono", Outfit, sans-serif;
+}
+
+body {
+    background-color: hsl(185, 41%, 84%);
+    
+    
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+header {
+    text-align: center;
+    height: 15vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+main,
+footer {
+    background-color: white;
+    
+    
+}
+
+main {
+    border-radius: 20px 20px 0 0;
+    
+    padding-bottom: 1em;
+}
+h4 {
+    color:hsl(184, 14%, 56%);
+    margin-bottom: 0.5em;
+}
+
+footer {
+    
+    padding: 1em;
+}
+
+.bill-section {
+    padding-top: 1.5em;
+    margin-left: 2em;
+    margin-right: 2em;
+}
+
+.percent-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 0.5em 0;
+}
+
+.percent-section li {
+    width: 140px;
+}
+
+.percent {
+    width: 100%;
+    font-size: 24px;
+    border-radius: 10px;
+    color: white;
+    background-color: hsl(183, 100%, 15%);
+    padding: 0.5em 0;
+    border: none;
+}
+
+.percent-btn:hover {
+    background-color: hsl(186, 41%, 84%);
+    color: hsl(183, 100%, 15%);
+    cursor: pointer;
+}
+
+.custom-percent {
+    background-color: hsl(189, 41%, 97%);
+    color:hsl(183, 100%, 15%);
+    text-align: center;
+    border: none;
+}
+
+.custom-percent::placeholder {
+    color:hsl(184, 14%, 56%);
+    font-weight: 700;
+}
+
+.custom-percent::-ms-input-placeholder {
+    color:hsl(183, 100%, 15%);
+}
+
+.custom-percent:-ms-input-placeholder {
+    color:hsl(183, 100%, 15%);
+}
+
+.tips-section {
+    background-color: hsl(183, 100%, 15%);
+    color: hsl(189, 41%, 97%);
+    border-radius: 20px; 
+    margin: 2em;
+    padding: 2em 1em 1em 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.bill-section .mini-section {
+    padding-bottom: 1.5em;
+}
+
+.tip-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1em;
+}
+
+.tip-container h1 {
+    width:50%;
+    color:hsl(172, 67%, 45%);
+    background-color: hsl(183, 100%, 15%);
+    font-size: 24px;
+    font-weight: 700;
+    text-align: right;
+}
+
+.tip-container:last-child {
+    margin-bottom: 0;
+}
+
+.error {
+    color: Tomato;
+    text-align: right;
+    font-weight: 500;
+    font-size: 0.75rem;
+    padding-top: 5px;
+}
+
+.bill-error {
+    display: none;
+}
+
+.people-error {
+    display: none;
+}
+.bill-section .inputs input {
+    width: 100%;
+    background-color: hsl(189, 41%, 97%);
+    border-radius: 10px;
+    color: hsl(183, 100%, 15%);
+    font-size: 24px;
+    font-weight: 700;
+    text-align: right;
+    padding: 0.5em;
+    border: none;
+}
+
+.inputs img {
+    padding: 1em;
+    position: absolute;
+}
+
+.custom-percent:focus,
+.custom-percent:active,
+.input:focus,
+.input:active {
+    outline-color: hsl(172, 67%, 45%);
+}
+.reset {
+    text-align: center;
+    margin-top: 1em;
+}
+
+.reset .reset-btn {
+    width: 80%;
+    text-transform: uppercase;
+    margin: 0 auto;
+    padding: 1em;
+    border-radius: 10px;
+    background-color: hsl(172, 67%, 45%);
+    font-weight: 700;
+    font-size: 1rem;
+    color:hsl(183, 100%, 15%);
+    border: none;
+}
+
+.reset .reset-btn:hover {
+    cursor: pointer;
+    background-color: hsl(189, 41%, 97%);
+}
+
+
+
+.attribution { 
+    font-size: 11px; text-align: center; 
+}
+
+.attribution a {
+     color: hsl(183, 100%, 15%); 
+}
+
+.percent-section li button.active-button {
+    background-color: hsl(172, 67%, 45%);
+    color: hsl(183, 100%, 15%);
+}
+
+@media screen and (min-width: 400px) and (max-width: 899px) {
+    .percent-section li {
+        width: 45%;
+    }
+
+    .reset {
+        margin-top: 0;
+    }
+}
+@media screen and (min-width: 900px) {
+    
+    main,
+    footer {
+        max-width: 1100px;
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    main {
+        display: flex;
+    }
+
+    footer {
+        border-radius: 0 0 20px 20px;
+    }
+
+    .bill-section {
+        width: 50%;
+    }
+    .tips-section {
+        width: 50%;
+    }
+    .reset {
+        margin-top: 0;
+    }
+
+    .tip-container h1 {
+        font-size: 2rem;
+    }
+
+}
